@@ -9,4 +9,4 @@ spec:
   ports:
   - nodePort: 32117
     port: 7211
-    targetPort: 7211
+    targetPort: 80
