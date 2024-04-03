@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: streaming-pod
+spec:
+  containers:
+  - name: streaming-pod
+    image: miojoinfnet/spoofystreamingapi
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+    - containerPort: 5115

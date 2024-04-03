@@ -35,8 +35,14 @@ spec:
   selector:
     tier: user
   ports:
+<<<<<<< HEAD
+  - nodePort: 32117
+    port: 7211
+    targetPort: 80
+=======
   - nodePort: 31127
     port: 80
+>>>>>>> 62231e348013c45894ea3950064e9c07e184f1f1
 
 --- 
 apiVersion: apps/v1
@@ -46,6 +52,17 @@ metadata:
   labels:
     tier: user
 spec:
+<<<<<<< HEAD
+  containers:
+  - name: user-pod
+    image: miojoinfnet/spoofyuserapi:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+    - containerPort: 80
+=======
   replicas: 4
   selector:
     matchLabels:
@@ -76,3 +93,4 @@ spec:
             - /tmp/healthy
           initialDelaySeconds: 5
           periodSeconds: 5
+>>>>>>> 62231e348013c45894ea3950064e9c07e184f1f1
